@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8" />
 	<title>React</title>
 	<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
 	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <!-- ライブラリの読み込み -->
-    <script src=”http://unpkg.com/@babel/standalone/babel.min.js”></script>
+	<!-- ライブラリの読み込み -->
+	<script src=”http://unpkg.com/@babel/standalone/babel.min.js”></script>
 </head>
+
 <body>
 	<h1>React</h1>
 	<div id="root">wait…</div>
-    <!-- scriptタグに属性を追加 -->
-    <script type="text/babel">
+	<!-- scriptタグに属性を追加 -->
+	<script type="text/babel">
 		let dom = document.querySelector('#root')
-        // 仮想エレメントの作成（JSXを使用）
+		// 仮想エレメントの作成（JSXを使用）
 		let element = (
 			<div>
 				<h2>JSX sample</h2>
 				<p>This is sample message.</p>
 			</div>
-        )
+		)
 		ReactDOM.render(element, dom)
 	</script>
 </body>
+
 </html>

@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8" />
 	<title>React</title>
 	<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
 	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <script src=”http://unpkg.com/@babel/standalone/babel.min.js”></script>
+	<script src=”http://unpkg.com/@babel/standalone/babel.min.js”></script>
 </head>
+
 <body>
 	<h1>React</h1>
 	<div id="root">wait…</div>
-    <script type="text/babel">
+	<script type="text/babel">
 		let dom = document.querySelector('#root')
 
 		let message = "新しいメッセージです。"
-	    let link = "https://google.com"
-	
-	    let el = (
-            <div>
-                <h4>{message}</h4>
-                <h5><a href={link}>This is link!</a></h5>
-            </div>
-        )
+		let link = "https://google.com"
+
+		let el = (
+			<div>
+				<h4>{message}</h4>
+				<h5><a href={link}>This is link!</a></h5>
+			</div>
+		)
 
 		ReactDOM.render(el, dom)
 	</script>
 </body>
+
 </html>

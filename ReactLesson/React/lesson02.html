@@ -3,23 +3,23 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>React</title>
-    <!-- ライブラリの読み込み -->
+	<!-- ライブラリの読み込み -->
 	<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
 	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 </head>
 <body>
 	<h1>React</h1>
-    <!-- 組込み用タグの用意 -->
+	<!-- 組込み用タグの用意 -->
 	<div id="root">wait…</div>
-    <!-- Reactのスクリプト -->
-    <script>
-        // 組込み用タグの取得
+	<!-- Reactのスクリプト -->
+	<script>
+		// 組込み用タグの取得
 		let dom = document.querySelector('#root')
-        // 仮想エレメントの作成
+		// 仮想エレメントの作成
 		let element = React.createElement(
 			'p', {}, 'Hello React!'
 		)
-        // レンダリングの実行
+		// レンダリングの実行
 		ReactDOM.render(element, dom)
 	</script>
 </body>
