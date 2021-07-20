@@ -19,23 +19,23 @@
         let title = "React page."
         let message = "メッセージを表示します"
 
-        let data = [
-            <li>One</li>,
-            <li>Two</li>,
-            <li>Three</li>
-        ]
+        let counter = 0
 
-        let el = (
-            <div>
-                <h4>{title}</h4>
-                <h6>{message}</h6>
-                <ul>
-                    {data}
-                </ul>
-            </div>
-        )
-        
-        ReactDOM.render(el, dom)
+        let doAction = (event)=>{
+            counter++
+            let el = (
+                <div>
+                    <h4>{title}</h4>
+                    <h6>{message}</h6>
+                    <h5 onClick={doAction}>
+                        count: {counter}.
+                    </h5>
+                </div>
+            )
+            ReactDOM.render(el, dom)
+        }
+
+        doAction()
     </script>
 </body>
 

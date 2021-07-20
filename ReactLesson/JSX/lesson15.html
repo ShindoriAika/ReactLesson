@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>React</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="http://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <h1>React</h1>
+    <div id="root">wait…</div>
+
+    <script type="text/babel">
+        let dom = document.querySelector('#root')
+
+        let title = "React page."
+        let message = "お名前をどうぞ"
+        let in_val = ''
+
+        let doChange = (event)=>{
+            in_val = event.target.value
+            message = 'こんにちは、' + in_val + 'さん!!'
+        }
+
+        let doAction = (event)=>{
+            let el = (
+                <div>
+                    <h4>{title}</h4>
+                    <h6>{message}</h6>
+                    <div>
+                        <div>
+                            <lavel>Input:</lavel>
+                            <input type="text" id="input" onChange={doChange} />
+                        </div>
+                        <button onClick={doAction}>Click</button>
+                    </div>
+                </div>
+            )
+            ReactDOM.render(el, dom)
+        }
+
+        doAction()
+    </script>
+</body>
+
+</html>

@@ -18,29 +18,33 @@
 
         let title = "React page."
         let message = "メッセージを表示します"
-        let content_true = `※これが、trueのときに表示されるメッセージです`
-        let content_false = `※これが、falseのときに表示されるメッセージです`
 
-        let flg = true
+        let data = {
+            url:'http://google.com',
+            title:'Google',
+            caption:'※これは、Googleの検索サイトです'
+        }
 
         let el = (
             <div>
                 <h4>{title}</h4>
                 <h6>{message}</h6>
-                {flg ?
-                    // trueのときの表示
+                {(()=>
                     <div>
-                        <p>{content_true}</p>
+                        <div>
+                            {data.title}
+                        </div>
+                        <div>
+                            {data.caption}
+                        </div>
+                        <div>
+                            <a href={data.url}>※{data.title}に移動</a>
+                        </div>
                     </div>
-                :
-                    // falseのときの表示
-                    <div>
-                        <p>{content_false}</p>
-                    </div>
-                }
+                )()}
             </div>
         )
-
+        
         ReactDOM.render(el, dom)
     </script>
 </body>
