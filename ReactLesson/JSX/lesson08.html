@@ -2,40 +2,40 @@
 <html>
 
 <head>
-	<meta charset="UTF-8" />
-	<title>React</title>
-	<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-	<script src="http://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <meta charset="UTF-8" />
+    <title>React</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="http://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 
 <body>
-	<h1>React</h1>
-	<div id="root">wait…</div>
-    
-	<script type="text/babel">
-		let dom = document.querySelector('#root')
+    <h1>React</h1>
+    <div id="root">wait…</div>
 
-		let title = "React page."
-		let message = "メッセージを表示します"
-		let content = `※これが、trueのときに表示されるメッセージです`
+    <script type="text/babel">
+        let dom = document.querySelector('#root')
+
+        let title = "React page."
+        let message = "メッセージを表示します"
+        let content = `※これが、trueのときに表示されるメッセージです`
 
         let flg = true
 
-		let el = (
-			<div>
-				<h4>{title}</h4>
-				<h6>{message}</h6>
-				{flg &&
+        let el = (
+            <div>
+                <h4>{title}</h4>
+                <h6>{message}</h6>
+                {flg &&
                     <div>
                         <p>{content}</p>
                     </div>
                 }
-			</div>
-		)
+            </div>
+        )
 
-		ReactDOM.render(el, dom)
-	</script>
+        ReactDOM.render(el, dom)
+    </script>
 </body>
 
 </html>
