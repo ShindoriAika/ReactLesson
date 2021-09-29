@@ -4,6 +4,8 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>React</title>
+	<!-- Bootstrapの読み込み -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossrigin="anonymous">
 	<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
 	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 	<!-- ライブラリの読み込み -->
@@ -11,19 +13,21 @@
 </head>
 
 <body>
-	<h1>React</h1>
-	<div id="root">wait…</div>
+	<h1 class="bg-primary text-white display-4">React</h1>
+	<div class="container mt-3">
+		<div id="root">wait…</div>
+	</div>
 	<!-- scriptタグに属性を追加 -->
 	<script type="text/babel">
 		let dom = document.querySelector('#root')
 		// 仮想エレメントの作成（JSXを使用）
-		let element = (
+		let el = (
 			<div>
 				<h2>JSX sample</h2>
 				<p>This is sample message.</p>
 			</div>
 		)
-		ReactDOM.render(element, dom)
+		ReactDOM.render(el, dom)
 	</script>
 </body>
 
